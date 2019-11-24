@@ -13,9 +13,22 @@
 
     function addCustomMenus_Shine(){
         add_theme_support('menus');
+        register_nav_menu('top_navigation', __('The top navigation is located at the top of each page.', 'ShineCustom'));
+        register_nav_menu('side_navigation', __('The side navigation is located at the side of each page', 'ShineCustom'));
+        register_nav_menu('bottom_navigation', __('The bottom navigation is located at the bottom of each page', 'ShineCustom'));
     }
 
     add_action('after_setup_theme', 'addCustomMenus_Shine');
+
+    function addCustomLogo_Shine() {
+        add_theme_support( 'custom-logo');
+    }
+    add_action( 'after_setup_theme', 'addCustomLogo_Shine' );
+
+    add_image_size('shine-logo', 150, 150);
+    add_theme_support('custom-logo', array(
+        'size' => 'shine-logo'
+    ));
 
     function register_navwalker(){
     	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
