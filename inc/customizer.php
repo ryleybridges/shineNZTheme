@@ -16,6 +16,11 @@
             'default' => '#4d4d4d',
             'transport' => 'refresh'
         ));
+
+        $wp_customize->add_setting('shine_backgroundColour', array(
+            'default' => '#FFFFFF',
+            'transport' => 'refresh'
+        ));
         //SECTIONS
 
         // CONTROLS
@@ -39,6 +44,15 @@
             'section' => 'colors',
             'settings' => 'shine_footerNavColour'
         )));
+
+        $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'shine_backgroundColour', array(
+            'label' => __('Background Colour', 'ShineCustom'),
+            'description' => 'Change the colour of the background',
+            'section' => 'colors',
+            'settings' => 'shine_backgroundColour'
+        )));
+
+        // $wp_customize->add_control( new WP_Customize_Control($wp_customize))
     }
 
     add_action( 'customize_register', 'mytheme_customize_register' );
@@ -48,7 +62,8 @@
             <style type="text/css">
                 .navTopColour { background-color: <?php echo get_theme_mod('shine_headerNavColour', '#4d4d4d'); ?>; }
                 .navBottomColour { background-color: <?php echo get_theme_mod('shine_footerNavColour', '#4d4d4d'); ?>; }
-                #mainBodyColour { background-color: <?php echo get_theme_mod('shine_mainBodyColour', '#FFFFFF'); ?>; }
+                #mainBody { background-color: <?php echo get_theme_mod('shine_mainBodyColour', '#FFFFFF'); ?>; }
+                body { background-color: <?php echo get_theme_mod('shine_backgroundColour', '#FFFFFF'); ?>; }
             </style>
         <?php
     }

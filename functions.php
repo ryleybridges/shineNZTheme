@@ -2,11 +2,11 @@
 
     function addCustomThemeFiles_Shine(){
         wp_enqueue_style('bootstrapCSSShine', get_template_directory_uri() . '/assests/css/bootstrap.min.css', array(), '4.3.1', 'all');
-        wp_enqueue_style('customCSSShine', get_template_directory_uri() . '/assests/css/style.css', array(), '0.0.1', 'all');
+        wp_enqueue_style('customCSSShine', get_template_directory_uri() . '/assests/css/style.min.css', array(), '0.0.1', 'all');
 
         wp_enqueue_script('jquery');
         wp_enqueue_script('bootstrapJSShine', get_template_directory_uri() . '/assests/js/bootstrap.min.js', array('jquery'), '4.3.1', true);
-        wp_enqueue_script('customJSShine', get_template_directory_uri() . '/assests/js/script.js', array('jquery'), '0.0.1', true);
+        wp_enqueue_script('customJSShine', get_template_directory_uri() . '/assests/js/script.min.js', array('jquery'), '0.0.1', true);
     }
 
     add_action('wp_enqueue_scripts', 'addCustomThemeFiles_Shine');

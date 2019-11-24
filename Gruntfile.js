@@ -5,7 +5,7 @@ module.exports = function(grunt){
 				files: [{
 					expand: true,
 					cwd: `assests/css/`,
-					src: [`*.css`, `!*.min.css`],
+					src: [`style.css`, `!style.min.css`],
 					dest: `assests/css/`,
 					ext: `.min.css`
 				}]
@@ -16,32 +16,29 @@ module.exports = function(grunt){
             options: {
               import: 1
             },
-            src: [`css/*.css`, `!css/*.min.css`]
+            src: [`assests/css/style.css`, `!assests/css/style.min.css`]
           }
         },
-		uglify: {
-			my_target: {
-				files: {
-					`assests/js/script.min.js`: [`assests/js/script.js`]
-				},
-				options: {
-					esversion: 6
-				}
-			}
-		},
 		jshint: {
 			files: [`assests/js/*.js`, `!assests/js/*.min.js`],
 			options: {
 				esversion: 6
 			}
 		},
+        uglify: {
+            my_target: {
+                files: {
+                    'assests/js/script.min.js': ['assests/js/script.js']
+                }
+            }
+        },
 		watch: {
 			js: {
 				files: [`assests/js/*.js`, `!assests/js/*.min.js`],
 				tasks: [`jshint`, `uglify`]
 			},
 			cssmin: {
-				files: [`assests/css/*.css`, `!assests/css/*.min.css`],
+				files: [`assests/css/style.css`, `!assests/css/style.min.css`],
 				tasks: [`cssmin`, `csslint`]
 			}
 		}
@@ -53,5 +50,5 @@ module.exports = function(grunt){
     grunt.loadNpmTasks(`grunt-contrib-jshint`);
     grunt.loadNpmTasks(`grunt-contrib-uglify-es`);
 
-    grunt.registerTask(`grunt`, [`watch`]);
+    grunt.registerTask(`default`, [`watch`]);
 };
