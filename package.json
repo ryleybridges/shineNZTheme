@@ -1,0 +1,29 @@
+{
+  "name": "shinetheme",
+  "version": "1.0.0",
+  "description": "Customisable Wordpress theme for Shine NZ",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryleybridges/shineNZTheme.git"
+  },
+  "author": "Ryley Bridges",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryleybridges/shineNZTheme/issues"
+  },
+  "homepage": "https://github.com/ryleybridges/shineNZTheme#readme",
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-csslint": "^2.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "dependencies": {
+    "grunt-contrib-uglify-es": "github:gruntjs/grunt-contrib-uglify#harmony"
+  }
+}
