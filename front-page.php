@@ -18,7 +18,7 @@
     <?php endif; ?>
 
     <div class="container" id="mainBody">
-
+        
     </div>
 
 <?php get_footer(); ?>
