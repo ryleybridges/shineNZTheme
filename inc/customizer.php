@@ -22,6 +22,11 @@
             'transport' => 'refresh'
         ));
 
+        $wp_customize->add_setting('shine_sidebarSwitch', array(
+            'default' => 'left',
+            'transport' => 'refresh'
+        ));
+
         // $wp_customize->add_setting('shine_navTextColourTop', array(
         //     'default' => 'navbar-light',
         //     'transport' => 'refresh'
@@ -33,6 +38,10 @@
         // ));
 
         //SECTIONS
+        $wp_customize->add_section('layout', array(
+            'title' => __('Layout', 'ShineCustom'),
+            'priority' => 50
+        ));
 
         // CONTROLS
         $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'shine_headerNavColour', array(
@@ -61,6 +70,17 @@
             'description' => 'Change the colour of the background',
             'section' => 'colors',
             'settings' => 'shine_backgroundColour'
+        )));
+
+        $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_sidebarSwitch', array(
+            'label' => __('Switch sidebar from left to right', '1902Custom'),
+            'section' => 'layout',
+            'settings' => 'shine_sidebarSwitch',
+            'type' => 'radio',
+            'choices' => array(
+                'left' => 'Left',
+                'right' => 'Right'
+            )
         )));
 
         // $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_navTextColourTop', array(

@@ -14,13 +14,17 @@ module.exports = function(grunt){
         csslint: {
           strict: {
             options: {
-              import: 1
+              import: 1,
+              ids: false,
+              'empty-rules': 2,
+              'duplicate-properities': 2,
+              'order-alphabetical': false
             },
             src: [`assests/css/style.css`, `!assests/css/style.min.css`]
           }
         },
 		jshint: {
-			files: [`assests/js/*.js`, `!assests/js/*.min.js`],
+			files: [`assests/js/script.js`, `!assests/js/script.min.js`],
 			options: {
 				esversion: 6
 			}
@@ -34,7 +38,7 @@ module.exports = function(grunt){
         },
 		watch: {
 			js: {
-				files: [`assests/js/*.js`, `!assests/js/*.min.js`],
+				files: [`assests/js/script.js`, `!assests/js/script.min.js`],
 				tasks: [`jshint`, `uglify`]
 			},
 			cssmin: {
