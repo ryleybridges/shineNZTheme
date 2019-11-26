@@ -26,6 +26,7 @@
         </div>
         <div class="col text-right pr-5 pt-4">
             <p>SHINE OFFICE:<br>(09) 815 4601</p>
+            <p>HELPLINE:<br>0508 744 633<br>(9am to 11pm, 7 days a week)</p>
             <p>OFFICE HOURS:<br>MON - FRI 8:30 - 4:30PM</p>
         </div>
     </div>
