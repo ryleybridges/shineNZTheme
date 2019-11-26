@@ -2,6 +2,10 @@
     height: 700px;
 }
 
+#homeBody {
+    height: 1100px;
+}
+
 #sideNav li{
     position: relative;
     display: block;
@@ -42,4 +46,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.btn-orange {
+    color: #fff;
+    background-color: #fc6621;
+    border-color: #fc6621;
 }

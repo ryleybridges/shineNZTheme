@@ -22,6 +22,11 @@
             'transport' => 'refresh'
         ));
 
+        $wp_customize->add_setting('shine_headerTextColour', array(
+            'default' => '#000000',
+            'transport' => 'refresh'
+        ));
+
         $wp_customize->add_setting('shine_sidebarSwitch', array(
             'default' => 'left',
             'transport' => 'refresh'
@@ -62,6 +67,13 @@
             'settings' => 'shine_backgroundColour'
         )));
 
+        $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'shine_headerTextColour', array(
+            'label' => __('Header text colour', 'ShineCustom'),
+            'description' => 'Change the colour of the header text',
+            'section' => 'colors',
+            'settings' => 'shine_headerTextColour'
+        )));
+
         $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_sidebarSwitch', array(
             'label' => __('Switch sidebar from left to right', '1902Custom'),
             'section' => 'layout',
@@ -83,7 +95,9 @@
                 .navTopColour { background-color: <?php echo get_theme_mod('shine_headerNavColour', '#4d4d4d'); ?>; }
                 .navBottomColour { background-color: <?php echo get_theme_mod('shine_footerNavColour', '#4d4d4d'); ?>; }
                 #mainBody { background-color: <?php echo get_theme_mod('shine_mainBodyColour', '#FFFFFF'); ?>; }
+                #homeBody { background-color: <?php echo get_theme_mod('shine_mainBodyColour', '#FFFFFF'); ?>; }
                 body { background-color: <?php echo get_theme_mod('shine_backgroundColour', '#FFFFFF'); ?>; }
+                .mainHeaderText { background-color: <?php echo get_theme_mod('shine_headerTextColour', '#000000'); ?>; }
             </style>
         <?php
     }
