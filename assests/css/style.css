@@ -23,11 +23,15 @@
 }
 
 #sideNav li.current-menu-item{
-    background-color: #000;
+    background-color: #fc6621;
 }
 
 #sideNav li.current-menu-item a{
     color: white;
+}
+
+#sideNav li a:hover {
+    text-decoration: none;
 }
 
 .headerImage {

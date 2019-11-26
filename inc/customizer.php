@@ -27,16 +27,6 @@
             'transport' => 'refresh'
         ));
 
-        // $wp_customize->add_setting('shine_navTextColourTop', array(
-        //     'default' => 'navbar-light',
-        //     'transport' => 'refresh'
-        // ));
-        //
-        // $wp_customize->add_setting('shine_navTextColourBottom', array(
-        //     'default' => 'navbar-light',
-        //     'transport' => 'refresh'
-        // ));
-
         //SECTIONS
         $wp_customize->add_section('layout', array(
             'title' => __('Layout', 'ShineCustom'),
@@ -82,30 +72,6 @@
                 'right' => 'Right'
             )
         )));
-
-        // $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_navTextColourTop', array(
-        //     'label' => __('Navigation Text Colour Top', 'ShineCustom'),
-        //     'description' => 'Change the colour of the text in the top navigation',
-        //     'section' => 'colors',
-        //     'settings' => 'shine_navTextColourTop',
-        //     'type' => 'radio',
-        //     'choices' => array(
-        //         'navbar-light' => 'Dark Text',
-        //         'navbar-dark' => 'Light Text'
-        //     )
-        // )));
-        //
-        // $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_navTextColourBottom', array(
-        //     'label' => __('Navigation Text Colour Bottom', 'ShineCustom'),
-        //     'description' => 'Change the colour of the text in the bottom navigation',
-        //     'section' => 'colors',
-        //     'settings' => 'shine_navTextColourBottom',
-        //     'type' => 'radio',
-        //     'choices' => array(
-        //         'navbar-light' => 'Dark Text',
-        //         'navbar-dark' => 'Light Text'
-        //     )
-        // )));
 
     }
 
