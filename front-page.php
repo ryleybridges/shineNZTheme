@@ -47,7 +47,7 @@
             <?php endif; ?>
         </div>
 
-        <a href="#" class="btn btn-orange mb-3">More News</a>
+        <!-- <a href="archive.php" class="btn btn-orange mb-3">More News</a> -->
     </div>
 
 <?php get_footer(); ?>

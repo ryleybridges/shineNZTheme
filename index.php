@@ -3,19 +3,18 @@
         <div class="container" id="homeBody">
             <h1 class="text-center"><?php echo get_bloginfo('name'); ?></h1>
             <h4 class="text-center"><?php echo get_bloginfo('description'); ?></h4>
+            <?php if(get_theme_mod('shine_textBlurb')): ?>
+                <p class="text-center px-3"><?php echo get_theme_mod('shine_textBlurb'); ?></p>
+            <?php endif; ?>
             <div class="row">
                 <div class="col">
                     <h3 class="text-center mt-4">Recent News</h3>
                 </div>
             </div>
-            <div class="row mx-2 my-3">
-                <?php $the_query = new WP_Query( array(
-                    'category_name' => 'news',
-                    'posts_per_page' => 3,
-                )); ?>
+            <div class="row mx-2 my-3 pb-3">
 
-                <?php if($the_query->have_posts()): ?>
-                    <?php while($the_query->have_posts()): $the_query->the_post(); ?>
+                <?php if(have_posts()): ?>
+                    <?php while(have_posts()): the_post(); ?>
                         <div class="card mt-2 col-12 d-flex justify-content-center" style="height: 17rem;">
                             <div class="card-body">
                                 <div class="row">
@@ -31,11 +30,8 @@
                             </div>
                         </div>
                     <?php endwhile; ?>
-                    <?php wp_reset_postdata(); ?>
                 <?php endif; ?>
             </div>
-
-            <a href="#" class="btn btn-orange mb-3">More News</a>
         </div>
 
 <?php get_footer(); ?>

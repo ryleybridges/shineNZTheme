@@ -32,10 +32,19 @@
             'transport' => 'refresh'
         ));
 
+        $wp_customize->add_setting('shine_textBlurb', array(
+            'transport' => 'refresh'
+        ));
+
         //SECTIONS
         $wp_customize->add_section('layout', array(
             'title' => __('Layout', 'ShineCustom'),
             'priority' => 50
+        ));
+
+        $wp_customize->add_section('text blurb', array(
+            'title' => __('Text Blurb', 'ShineCustom'),
+            'priority' => 60
         ));
 
         // CONTROLS
@@ -85,6 +94,13 @@
             )
         )));
 
+        $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_textBlurb', array(
+            'label' => __('Text blurb content', 'ShineCustom'),
+            'section' => 'text blurb',
+            'settings' => 'shine_textBlurb',
+            'type' => 'textarea'
+        )));
+
     }
 
     add_action( 'customize_register', 'mytheme_customize_register' );
@@ -96,6 +112,7 @@
                 .navBottomColour { background-color: <?php echo get_theme_mod('shine_footerNavColour', '#4d4d4d'); ?>; }
                 #mainBody { background-color: <?php echo get_theme_mod('shine_mainBodyColour', '#FFFFFF'); ?>; }
                 #homeBody { background-color: <?php echo get_theme_mod('shine_mainBodyColour', '#FFFFFF'); ?>; }
+                #indexBody { background-color: <?php echo get_theme_mod('shine_mainBodyColour', '#FFFFFF'); ?>; }
                 body { background-color: <?php echo get_theme_mod('shine_backgroundColour', '#FFFFFF'); ?>; }
                 .mainHeaderText { background-color: <?php echo get_theme_mod('shine_headerTextColour', '#000000'); ?>; }
             </style>
