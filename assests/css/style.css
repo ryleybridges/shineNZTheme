@@ -10,6 +10,10 @@
     height: 100%;
 }
 
+#pagesPostsBody {
+    height: 100%;
+}
+
 #sideNav li{
     position: relative;
     display: block;
@@ -40,6 +44,7 @@
 
 #sideNav li a:hover {
     text-decoration: none;
+    color: #fc6621;
 }
 
 .headerImage {

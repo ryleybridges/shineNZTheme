@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-        <div class="container" id="homeBody">
+        <div class="container" id="indexBody">
             <h1 class="text-center"><?php echo get_bloginfo('name'); ?></h1>
             <h4 class="text-center"><?php echo get_bloginfo('description'); ?></h4>
             <?php if(get_theme_mod('shine_textBlurb')): ?>

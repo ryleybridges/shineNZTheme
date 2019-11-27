@@ -21,7 +21,7 @@
 
     <?php if(!has_nav_menu('side_navigation')): ?>
         <div class="col-12">
-            <div class="card mb-3 mt-3 p-2">
+            <div class="card mb-3 mt-3 p-3">
                 <?php if (have_posts()): ?>
                     <?php while(have_posts()): the_post(); ?>
                         <h2 class="text-center"><?php the_title(); ?></h2>
@@ -32,7 +32,7 @@
         </div>
     <?php else: ?>
         <div class="col-8">
-            <div class="card mb-3 mt-3 p-2">
+            <div class="card mb-3 mt-3 p-3">
                 <?php if (have_posts()): ?>
                     <?php while(have_posts()): the_post(); ?>
                         <h2 class="text-center"><?php the_title(); ?></h2>
