@@ -18,7 +18,7 @@
     <div class="container" id="indexBody">
         <h2 class="pt-2 text-center"><?php echo get_bloginfo('description'); ?></h2>
         <div class="row">
-            <p class="mt-1 mx-5 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="mt-1 mx-5 text-center"><?php echo get_theme_mod('shine_textBlurb'); ?></p>
         </div>
         <div class="row mx-2 my-3 pb-4">
             <?php $the_query = new WP_Query( array(

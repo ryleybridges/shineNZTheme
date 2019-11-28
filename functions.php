@@ -28,9 +28,10 @@
     }
     add_action( 'after_setup_theme', 'addCustomLogo_Shine' );
 
-    add_image_size('shine-logo', 50, 50);
+    add_image_size('logo', 150, 150);
     add_theme_support('custom-logo', array(
-        'size' => 'shine-logo'
+        'height' => 150,
+        'width' => 150
     ));
 
     $customHeaderDefaults = array(

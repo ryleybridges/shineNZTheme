@@ -96,6 +96,7 @@
 
         $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_textBlurb', array(
             'label' => __('Text blurb content', 'ShineCustom'),
+            'description' => 'Insert front page blurb text for below the subtitle',
             'section' => 'text blurb',
             'settings' => 'shine_textBlurb',
             'type' => 'textarea'
