@@ -6,11 +6,6 @@
             <?php if(get_theme_mod('shine_textBlurb')): ?>
                 <p class="text-center px-3"><?php echo get_theme_mod('shine_textBlurb'); ?></p>
             <?php endif; ?>
-            <div class="row">
-                <div class="col">
-                    <h3 class="text-center mt-4">Recent News</h3>
-                </div>
-            </div>
             <div class="row mx-2 my-3 pb-3">
 
                 <?php if(have_posts()): ?>
