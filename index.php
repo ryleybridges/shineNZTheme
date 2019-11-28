@@ -15,17 +15,25 @@
 
                 <?php if(have_posts()): ?>
                     <?php while(have_posts()): the_post(); ?>
-                        <div class="card mt-2 col-12 d-flex justify-content-center" style="height: 17rem;">
+                        <div class="card mt-2 col-12 d-flex justify-content-center">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-3">
-                                        <?php the_post_thumbnail(); ?>
-                                    </div>
-                                    <div class="col-9">
-                                        <h3><?php the_title(); ?></h3>
-                                        <p class="card-text"><?php the_excerpt(); ?></p>
-                                        <a href="<?php the_permalink(); ?>" class="btn btn-orange">Read More</a>
-                                    </div>
+                                    <?php if(has_post_thumbnail()): ?>
+                                        <div class="col-md-3 col-12">
+                                            <?php the_post_thumbnail(); ?>
+                                        </div>
+                                        <div class="col-md-9 col-12">
+                                            <h3><?php the_title(); ?></h3>
+                                            <p class="card-text"><?php the_excerpt(); ?></p>
+                                            <a href="<?php the_permalink(); ?>" class="btn btn-orange">Read More</a>
+                                        </div>
+                                    <?php else: ?>
+                                        <div class="col-12">
+                                            <h3><?php the_title(); ?></h3>
+                                            <p class="card-text"><?php the_excerpt(); ?></p>
+                                            <a href="<?php the_permalink(); ?>" class="btn btn-orange">Read More</a>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
