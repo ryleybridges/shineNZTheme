@@ -31,6 +31,18 @@
         </div>
     </div>
 </footer>
+<?php if((get_theme_mod('shine_buttonSwitchEnds') === 'bottom') || (get_theme_mod('shine_buttonSwitchEnds') === 'both')): ?>
+    <nav class="navbar navbar-expand-md navbar-light buttonNavColour">
+        <div class="row">
+            <div class="col">
+                <div class="float-md-right float-left">
+                    <button type="button" name="button" class="btn btn-orange mr-3" aria-label="Donate Button"><a href="https://secure.flo2cash.co.nz/donations/shine/DonateSecure.aspx" style="color: white; text-decoration: none;">DONATE</a></button>
+                    <button type="button" name="button" class="btn btn-orange"><a href="https://www.stuff.co.nz/" style="color: white; text-decoration: none;" aria-label="Quick Exit">QUICK EXIT</a></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+<?php endif; ?>
 
 
 

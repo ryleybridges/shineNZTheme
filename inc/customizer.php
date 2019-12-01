@@ -22,11 +22,6 @@
             'transport' => 'refresh'
         ));
 
-        // $wp_customize->add_setting('shine_headerTextColour', array(
-        //     'default' => '#000000',
-        //     'transport' => 'refresh'
-        // ));
-
         $wp_customize->add_setting('shine_sidebarSwitch', array(
             'default' => 'left',
             'transport' => 'refresh'
@@ -35,6 +30,21 @@
         $wp_customize->add_setting('shine_textBlurb', array(
             'transport' => 'refresh'
         ));
+
+        $wp_customize->add_setting('shine_buttonSwitchEnds', array(
+            'default' => 'top',
+            'transport' => 'refresh'
+        ));
+
+        $wp_customize->add_setting('shine_buttonNavColour', array(
+            'default' => '#FFFFFF',
+            'transport' => 'refresh'
+        ));
+
+        // $wp_customize->add_setting('shine_ButtonColour', array(
+        //     'default' => '#fc6621',
+        //     'transport' => 'refresh'
+        // ));
 
         //SECTIONS
         $wp_customize->add_section('layout', array(
@@ -76,6 +86,20 @@
             'settings' => 'shine_backgroundColour'
         )));
 
+        $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'shine_buttonNavColour', array(
+            'label' => __('Button Navigation Bar Colour', 'ShineCustom'),
+            'description' => 'Change the colour for the button navigation bar',
+            'section' => 'colors',
+            'settings' => 'shine_buttonNavColour'
+        )));
+
+        // $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'shine_ButtonColour', array(
+        //     'label' => __('Button Colour', 'ShineCustom'),
+        //     'description' => 'Change the colour of the buttons',
+        //     'section' => 'colors',
+        //     'settings' => 'shine_ButtonColour'
+        // )));
+
         $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_sidebarSwitch', array(
             'label' => __('Switch sidebar from left to right', '1902Custom'),
             'section' => 'layout',
@@ -95,6 +119,19 @@
             'type' => 'textarea'
         )));
 
+        $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_buttonSwitchEnds', array(
+            'label' => __('Switch button locations', 'ShineCustom'),
+            'description' => 'Switch donate and quick exit button locations',
+            'section' => 'layout',
+            'settings' => 'shine_buttonSwitchEnds',
+            'type' => 'radio',
+            'choices' => array(
+                'top' => 'Top',
+                'bottom' => 'Bottom',
+                'both' => 'Both'
+            )
+        )));
+
     }
 
     add_action( 'customize_register', 'mytheme_customize_register' );
@@ -108,7 +145,8 @@
                 #indexBody { background-color: <?php echo get_theme_mod('shine_mainBodyColour', '#FFFFFF'); ?>; }
                 #pagesPostsBody { background-color: <?php echo get_theme_mod('shine_mainBodyColour', '#FFFFFF'); ?>; }
                 body { background-color: <?php echo get_theme_mod('shine_backgroundColour', '#FFFFFF'); ?>; }
-                /* .mainHeaderText { background-color: <?php // echo get_theme_mod('shine_headerTextColour', '#000000'); ?>; } */
+                .buttonNavColour { background-color: <?php echo get_theme_mod('shine_buttonNavColour', '#FFFFFF'); ?>; }
+                /* button { background-color: <?php // echo get_theme_mod('shine_ButtonColour', '#fc6621'); ?>; } */
             </style>
         <?php
     }
