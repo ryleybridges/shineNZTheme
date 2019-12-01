@@ -32,5 +32,13 @@
                                 ));
                             ?>
                      </div>
+                     <div class="row">
+                         <div class="col">
+                             <div class="float-right">
+                                 <button type="button" name="button" class="btn btn-orange mr-3"><a href="https://secure.flo2cash.co.nz/donations/shine/DonateSecure.aspx" style="color: white; text-decoration: none;">DONATE</a></button>
+                                 <button type="button" name="button" class="btn btn-orange"><a href="https://www.stuff.co.nz/" style="color: white; text-decoration: none;">QUICK EXIT</a></button>
+                             </div>
+                         </div>
+                     </div>
                     </nav>
                 <?php endif; ?>
