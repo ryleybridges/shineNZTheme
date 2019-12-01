@@ -3,9 +3,6 @@
         <div class="container" id="indexBody">
             <h1 class="text-center"><?php echo get_bloginfo('name'); ?></h1>
             <h4 class="text-center"><?php echo get_bloginfo('description'); ?></h4>
-            <?php if(get_theme_mod('shine_textBlurb')): ?>
-                <p class="text-center px-3"><?php echo get_theme_mod('shine_textBlurb'); ?></p>
-            <?php endif; ?>
             <div class="row mx-2 my-3 pb-3">
 
                 <?php if(have_posts()): ?>
@@ -29,8 +26,8 @@
                                                 <p class="card-text"><?php the_excerpt(); ?></p>
                                                 <a href="<?php the_permalink(); ?>" class="btn btn-orange">Read More</a>
                                             </div>
+                                        <?php endif; ?>
                                     <?php endif; ?>
-                                <?php endif; ?>
                                 </div>
                             </div>
                         </div>
