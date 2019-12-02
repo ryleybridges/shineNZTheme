@@ -32,7 +32,7 @@
     </div>
 </footer>
 <?php if((get_theme_mod('shine_buttonSwitchEnds') === 'bottom') || (get_theme_mod('shine_buttonSwitchEnds') === 'both')): ?>
-    <nav class="navbar navbar-expand-md navbar-light buttonNavColour">
+    <nav class="navbar navbar-expand-md navbar-light buttonNavColour d-flex justify-content-end float-md-right">
         <div class="row">
             <div class="col">
                 <div class="float-md-right float-left">
