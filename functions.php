@@ -37,14 +37,14 @@
     $customHeaderDefaults = array(
         'width' => 1280,
         'height' => 720,
-        'default-image' => get_template_directory_uri() . '/assests/images/Helpline.jpg'
+        'default-image' => get_template_directory_uri() . '/assests/images/man-alone.jpg'
     );
     add_theme_support('custom-header', $customHeaderDefaults);
 
     register_default_headers(array (
         'defaultImage' => array(
-            'url' => get_template_directory_uri() . '/assests/images/Helpline.jpg',
-            'thumbnail_url' => get_template_directory_uri() . '/assests/images/Helpline.jpg',
+            'url' => get_template_directory_uri() . '/assests/images/man-alone.jpg',
+            'thumbnail_url' => get_template_directory_uri() . '/assests/images/man-alone.jpg',
             'description' => __('The default image for the custom header.', 'ShineCustom')
         )
     ));

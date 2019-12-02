@@ -26,9 +26,9 @@
                     </button>
 
                     <?php if(!the_custom_logo()): ?>
-                        <a class="navbar-brand" href="#"><?php echo get_bloginfo('name'); ?></a>
+                        <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
                     <?php else: ?>
-                        <a class="navbar-brand" href="#"><?php the_custom_logo(); ?></a>
+                        <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php the_custom_logo(); ?></a>
                     <?php endif; ?>
 
                     <?php
