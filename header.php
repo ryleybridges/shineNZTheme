@@ -11,8 +11,8 @@
                 <div class="row">
                     <div class="col-12 float-left">
                         <div>
-                            <button type="button" name="button" class="btn btn-orange mr-4 float-left" aria-label="Donate Button"><a href="https://secure.flo2cash.co.nz/donations/shine/DonateSecure.aspx" style="color: white; text-decoration: none;">DONATE</a></button>
-                            <button type="button" name="button" class="btn btn-orange" aria-label="Quick Exit"><a href="https://www.stuff.co.nz/" style="color: white; text-decoration: none;">QUICK EXIT</a></button>
+                            <button type="button" name="button" class="btn btn-orange mr-4 float-left" aria-label="Donate Button"><a class="topBtn" href="https://secure.flo2cash.co.nz/donations/shine/DonateSecure.aspx">DONATE</a></button>
+                            <button type="button" name="button" class="btn btn-orange" aria-label="Quick Exit"><a class="topBtn" href="https://www.stuff.co.nz/">QUICK EXIT</a></button>
                         </div>
                     </div>
                 </div>

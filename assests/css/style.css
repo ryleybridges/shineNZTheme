@@ -58,3 +58,27 @@
     background-color: #fc6621;
     border-color: #fc6621;
 }
+
+#moreNewsBtn {
+    color: white;
+}
+
+#moreNewsBtn:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.topBtn {
+    color: white;
+}
+
+.topBtn:hover{
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (max-width:650px){
+    #sidebarNav {
+        display: none !important;
+    }
+}
