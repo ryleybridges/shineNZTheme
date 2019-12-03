@@ -49,6 +49,8 @@
         )
     ));
 
+    add_theme_support('post-thumbnails', array('post'));
+
     // NAVWALKER
     function register_navwalker(){
     	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';

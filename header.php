@@ -7,11 +7,11 @@
     </head>
     <body>
         <?php if((get_theme_mod('shine_buttonSwitchEnds') === 'top') || (get_theme_mod('shine_buttonSwitchEnds') === 'both')): ?>
-            <nav class="navbar navbar-expand-md navbar-light buttonNavColour d-flex justify-content-end float-md-right">
+            <nav class="navbar navbar-expand-md navbar-light buttonNavColour">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-12 float-left">
                         <div>
-                            <button type="button" name="button" class="btn btn-orange mr-3" aria-label="Donate Button"><a href="https://secure.flo2cash.co.nz/donations/shine/DonateSecure.aspx" style="color: white; text-decoration: none;">DONATE</a></button>
+                            <button type="button" name="button" class="btn btn-orange mr-4 float-left" aria-label="Donate Button"><a href="https://secure.flo2cash.co.nz/donations/shine/DonateSecure.aspx" style="color: white; text-decoration: none;">DONATE</a></button>
                             <button type="button" name="button" class="btn btn-orange" aria-label="Quick Exit"><a href="https://www.stuff.co.nz/" style="color: white; text-decoration: none;">QUICK EXIT</a></button>
                         </div>
                     </div>
