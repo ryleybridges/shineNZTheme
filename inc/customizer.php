@@ -41,14 +41,18 @@
             'transport' => 'refresh'
         ));
 
+        $wp_customize->add_setting('shine_footerTextInfo', array(
+            'transport' => 'refresh'
+        ));
+
         //SECTIONS
         $wp_customize->add_section('layout', array(
             'title' => __('Layout', 'ShineCustom'),
             'priority' => 50
         ));
 
-        $wp_customize->add_section('text blurb', array(
-            'title' => __('Text Blurb', 'ShineCustom'),
+        $wp_customize->add_section('text insert', array(
+            'title' => __('Text Insert', 'ShineCustom'),
             'priority' => 60
         ));
 
@@ -89,7 +93,7 @@
         )));
 
         $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_sidebarSwitch', array(
-            'label' => __('Switch sidebar from left to right', '1902Custom'),
+            'label' => __('Switch sidebar from left to right', 'ShineCustom'),
             'section' => 'layout',
             'settings' => 'shine_sidebarSwitch',
             'type' => 'radio',
@@ -102,7 +106,7 @@
         $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_textBlurb', array(
             'label' => __('Text blurb content', 'ShineCustom'),
             'description' => 'Insert front page blurb text for below the subtitle',
-            'section' => 'text blurb',
+            'section' => 'text insert',
             'settings' => 'shine_textBlurb',
             'type' => 'textarea'
         )));
@@ -120,9 +124,17 @@
             )
         )));
 
+        $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_footerTextInfo', array(
+            'label' => __('Footer Text', 'ShineCustom'),
+            'description' => 'Insert text into the footer',
+            'section' => 'text insert',
+            'settings' => 'shine_footerTextInfo',
+            'type' => 'textarea'
+        )));
+
     }
 
-    add_action( 'customize_register', 'mytheme_customize_register' );
+    add_action( 'customize_register', 'mytheme_customize_register');
 
     function mytheme_customize_css(){
         ?>

@@ -24,20 +24,20 @@
                 </nav>
             <?php endif; ?>
         </div>
-        <div class="col text-right pr-5 pt-4">
-            <p>SHINE OFFICE:<br>(09) 815 4601</p>
-            <p>HELPLINE:<br>0508 744 633<br>(9am to 11pm, 7 days a week)</p>
-            <p>OFFICE HOURS:<br>MON - FRI 8:30 - 4:30PM</p>
+        <div class="col">
+            <?php if(get_theme_mod('shine_footerTextInfo')): ?>
+                <p class="text-right pr-5 pt-4"><?php get_theme_mod('shine_footerTextInfo'); ?></p>
+            <?php endif; ?>
         </div>
     </div>
 </footer>
 <?php if((get_theme_mod('shine_buttonSwitchEnds') === 'bottom') || (get_theme_mod('shine_buttonSwitchEnds') === 'both')): ?>
-    <nav class="navbar navbar-expand-md navbar-light buttonNavColour d-flex justify-content-end float-md-right">
+    <nav class="navbar navbar-expand-md navbar-light buttonNavColour">
         <div class="row">
-            <div class="col">
-                <div class="float-md-right float-left">
-                    <button type="button" name="button" class="btn btn-orange mr-3" aria-label="Donate Button"><a href="https://secure.flo2cash.co.nz/donations/shine/DonateSecure.aspx" style="color: white; text-decoration: none;">DONATE</a></button>
-                    <button type="button" name="button" class="btn btn-orange"><a href="https://www.stuff.co.nz/" style="color: white; text-decoration: none;" aria-label="Quick Exit">QUICK EXIT</a></button>
+            <div class="col-12 float-left">
+                <div>
+                    <button type="button" name="button" class="btn btn-orange mr-4 float-left" aria-label="Donate Button"><a class="topBtn" href="https://secure.flo2cash.co.nz/donations/shine/DonateSecure.aspx">DONATE</a></button>
+                    <button type="button" name="button" class="btn btn-orange" aria-label="Quick Exit"><a class="topBtn" href="https://www.stuff.co.nz/">QUICK EXIT</a></button>
                 </div>
             </div>
         </div>
