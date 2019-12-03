@@ -41,11 +41,6 @@
             'transport' => 'refresh'
         ));
 
-        // $wp_customize->add_setting('shine_ButtonColour', array(
-        //     'default' => '#fc6621',
-        //     'transport' => 'refresh'
-        // ));
-
         //SECTIONS
         $wp_customize->add_section('layout', array(
             'title' => __('Layout', 'ShineCustom'),
@@ -93,13 +88,6 @@
             'settings' => 'shine_buttonNavColour'
         )));
 
-        // $wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'shine_ButtonColour', array(
-        //     'label' => __('Button Colour', 'ShineCustom'),
-        //     'description' => 'Change the colour of the buttons',
-        //     'section' => 'colors',
-        //     'settings' => 'shine_ButtonColour'
-        // )));
-
         $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_sidebarSwitch', array(
             'label' => __('Switch sidebar from left to right', '1902Custom'),
             'section' => 'layout',
@@ -146,7 +134,6 @@
                 #pagesPostsBody { background-color: <?php echo get_theme_mod('shine_mainBodyColour', '#FFFFFF'); ?>; }
                 body { background-color: <?php echo get_theme_mod('shine_backgroundColour', '#FFFFFF'); ?>; }
                 .buttonNavColour { background-color: <?php echo get_theme_mod('shine_buttonNavColour', '#FFFFFF'); ?>; }
-                /* button { background-color: <?php // echo get_theme_mod('shine_ButtonColour', '#fc6621'); ?>; } */
             </style>
         <?php
     }
