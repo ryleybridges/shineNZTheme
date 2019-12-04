@@ -43,7 +43,6 @@
                         </div>
                     </div>
                 <?php endwhile; ?>
-                <button type="button" name="button" class="btn btn-orange btn-block mt-3"><a id="moreNewsBtn" href="/MODULE_4/shineNZTheme/category/news">More News</a></button>
                 <?php wp_reset_postdata(); ?>
             <?php endif; ?>
         </div>
