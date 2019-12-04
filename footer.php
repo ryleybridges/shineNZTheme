@@ -26,22 +26,28 @@
         </div>
         <div class="col">
             <?php if(get_theme_mod('shine_footerTextInfo')): ?>
-                <p class="text-right pr-5 pt-4"><?php get_theme_mod('shine_footerTextInfo'); ?></p>
+                <p class="text-right pr-5 pt-4"><?php echo get_theme_mod('shine_footerTextInfo'); ?></p>
             <?php endif; ?>
         </div>
     </div>
 </footer>
-<?php if((get_theme_mod('shine_buttonSwitchEnds') === 'bottom') || (get_theme_mod('shine_buttonSwitchEnds') === 'both')): ?>
-    <nav class="navbar navbar-expand-md navbar-light buttonNavColour">
-        <div class="row">
-            <div class="col-12 float-left">
-                <div>
-                    <button type="button" name="button" class="btn btn-orange mr-4 float-left" aria-label="Donate Button"><a class="topBtn" href="https://secure.flo2cash.co.nz/donations/shine/DonateSecure.aspx">DONATE</a></button>
-                    <button type="button" name="button" class="btn btn-orange" aria-label="Quick Exit"><a class="topBtn" href="https://www.stuff.co.nz/">QUICK EXIT</a></button>
+<?php if((get_theme_mod('shine_navTopButton1')) || (get_theme_mod('shine_navTopButton2'))): ?>
+    <?php if((get_theme_mod('shine_buttonSwitchEnds') === 'bottom') || (get_theme_mod('shine_buttonSwitchEnds') === 'both')): ?>
+            <nav class="navbar navbar-expand-md navbar-light buttonNavColour">
+                <div class="row">
+                    <div class="col-12 float-left">
+                        <div>
+                            <?php if ( (get_theme_mod('shine_navTopButton1')) && (get_theme_mod('shine_navTopButtonLink1')) ): ?>
+                                <button type="button" name="button" class="btn btn-orange mr-4 float-left" aria-label="<?php echo get_theme_mod('shine_navTopButton1') ?>"><a class="topBtn" href="<?php echo get_theme_mod('shine_navTopButtonLink1'); ?>"><?php echo get_theme_mod('shine_navTopButton1'); ?></a></button>
+                            <?php endif; ?>
+                            <?php if((get_theme_mod('shine_navTopButton2')) && (get_theme_mod('shine_navTopButtonLink2'))): ?>
+                                <button type="button" name="button" class="btn btn-orange" aria-label="<?php echo get_theme_mod('shine_navTopButton2') ?>"><a class="topBtn" href="<?php echo get_theme_mod('shine_navTopButtonLink2'); ?>"><?php echo get_theme_mod('shine_navTopButton2'); ?></a></button>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </nav>
+            </nav>
+    <?php endif; ?>
 <?php endif; ?>
 
 

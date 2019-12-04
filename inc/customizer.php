@@ -45,6 +45,22 @@
             'transport' => 'refresh'
         ));
 
+        $wp_customize->add_setting('shine_navTopButton1', array(
+            'transport' => 'refresh'
+        ));
+
+        $wp_customize->add_setting('shine_navTopButton2', array(
+            'transport' => 'refresh'
+        ));
+
+        $wp_customize->add_setting('shine_navTopButtonLink1', array(
+            'transport' => 'refresh'
+        ));
+
+        $wp_customize->add_setting('shine_navTopButtonLink2', array(
+            'transport' => 'refresh'
+        ));
+
         //SECTIONS
         $wp_customize->add_section('layout', array(
             'title' => __('Layout', 'ShineCustom'),
@@ -54,6 +70,11 @@
         $wp_customize->add_section('text insert', array(
             'title' => __('Text Insert', 'ShineCustom'),
             'priority' => 60
+        ));
+
+        $wp_customize->add_section('nav buttons', array(
+            'title' => __('Navbar Buttons', 'ShineCustom'),
+            'priority' => 70
         ));
 
         // CONTROLS
@@ -124,12 +145,44 @@
             )
         )));
 
-        $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_footerTextInfo', array(
+        $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_footerTextInfoControl', array(
             'label' => __('Footer Text', 'ShineCustom'),
             'description' => 'Insert text into the footer',
             'section' => 'text insert',
             'settings' => 'shine_footerTextInfo',
             'type' => 'textarea'
+        )));
+
+        $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_navTopButton1', array(
+            'label' => __('Navbar Button One', 'ShineCustom'),
+            'description' => 'Create first navbar button',
+            'section' => 'nav buttons',
+            'settings' => 'shine_navTopButton1',
+            'type' => 'input'
+        )));
+
+        $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_navTopButtonLink1', array(
+            'label' => __('Navbar Link One', 'ShineCustom'),
+            'description' => 'Link for first navbar button',
+            'section' => 'nav buttons',
+            'settings' => 'shine_navTopButtonLink1',
+            'type' => 'input'
+        )));
+
+        $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_navTopButton2', array(
+            'label' => __('Navbar Button Two', 'ShineCustom'),
+            'description' => 'Create second navbar button',
+            'section' => 'nav buttons',
+            'settings' => 'shine_navTopButton2',
+            'type' => 'input'
+        )));
+
+        $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'shine_navTopButtonLink2', array(
+            'label' => __('Navbar Link Two', 'ShineCustom'),
+            'description' => 'Link for second navbar button',
+            'section' => 'nav buttons',
+            'settings' => 'shine_navTopButtonLink2',
+            'type' => 'input'
         )));
 
     }
