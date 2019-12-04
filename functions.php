@@ -49,7 +49,7 @@
         )
     ));
 
-    add_theme_support('post-thumbnails', array('post'));
+    add_theme_support('post-thumbnails', array('post', 'product'));
 
     // NAVWALKER
     function register_navwalker(){
@@ -66,3 +66,5 @@
     remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
 
     require_once get_template_directory() . '/inc/customizer.php';
+
+    require get_parent_theme_file_path('./addons/educational_alert.php');
