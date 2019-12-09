@@ -23,14 +23,6 @@
     add_action('after_setup_theme', 'addCustomMenus_Shine');
 
     // IMAGES
-    function addCustomLogo_Shine() {
-        add_theme_support( 'custom-logo', array(
-            'height' => 150,
-		    'width' => 150,
-		    'flex-height' => true,
-        ));
-    }
-    add_action( 'after_setup_theme', 'addCustomLogo_Shine' );
 
     $customHeaderDefaults = array(
         'width' => 1280,

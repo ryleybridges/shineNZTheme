@@ -35,7 +35,7 @@
                     <?php if(!the_custom_logo()): ?>
                         <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
                     <?php else: ?>
-                        <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php echo get_theme_mod( 'custom_logo'); ?></a>
+                        <div class="mainLogo"><a href="<?php echo home_url(); ?>"><?php custom_logo('logo', ['class' => 'img-fluid']); ?></a></div>
                     <?php endif; ?>
 
                     <?php
