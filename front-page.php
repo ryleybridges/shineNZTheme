@@ -22,7 +22,6 @@
         </div>
         <div class="row mx-2 my-3 pb-4">
             <?php $the_query = new WP_Query( array(
-                'category_name' => 'news',
                 'posts_per_page' => 3,
             )); ?>
 

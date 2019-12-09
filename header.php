@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title><?php echo get_bloginfo('name'); ?></title>
         <?php wp_head(); ?>
     </head>
@@ -34,7 +35,7 @@
                     <?php if(!the_custom_logo()): ?>
                         <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
                     <?php else: ?>
-                        <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php the_custom_logo(); ?></a>
+                        <a class="navbar-brand" href="<?php echo home_url(); ?>"><?php echo get_theme_mod( 'custom_logo'); ?></a>
                     <?php endif; ?>
 
                     <?php

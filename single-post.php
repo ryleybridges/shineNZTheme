@@ -44,7 +44,7 @@
     <?php endif; ?>
 
     <?php if(has_nav_menu('side_navigation')): ?>
-        <?php if(get_theme_mod('shine_sidebarSwitch') === 'right'): ?>
+        <?php if((get_theme_mod('shine_sidebarSwitch') === 'right') || (get_theme_mod('shine_sidebarSwitch') === '')): ?>
             <div class="col-4 col-md-3" id="sidebarNav">
                 <div class="card h-90 mb-2 mt-2 p-2">
                     <?php wp_nav_menu( array(

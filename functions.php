@@ -24,15 +24,13 @@
 
     // IMAGES
     function addCustomLogo_Shine() {
-        add_theme_support( 'custom-logo');
+        add_theme_support( 'custom-logo', array(
+            'height' => 150,
+		    'width' => 150,
+		    'flex-height' => true,
+        ));
     }
     add_action( 'after_setup_theme', 'addCustomLogo_Shine' );
-
-    add_image_size('logo', 150, 150);
-    add_theme_support('custom-logo', array(
-        'height' => 150,
-        'width' => 150
-    ));
 
     $customHeaderDefaults = array(
         'width' => 1280,
